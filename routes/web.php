@@ -16,4 +16,4 @@
 // });
 
 Route::get('/', 'Home\IndexController@index');
-Route::get('admin1', 'Admin\IndexController@index');
+Route::get('admin', 'Admin\IndexController@index');

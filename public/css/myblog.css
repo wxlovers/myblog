@@ -1,0 +1,24 @@
+/*总览信息*/
+.total-data-box {
+    height: 120px;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+.white-bg {
+    background-color: #fff;
+}
+
+.blog-table {
+    padding-left:20px;
+}
+
+.panel-default>.panel-heading {
+    color: #333;
+    background-color: #fff;
+    border-color: #ddd;
+}
+
+#blog-header, #blog-box {
+    min-width:800px;
+}

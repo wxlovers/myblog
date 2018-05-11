@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'PRC',
 
     /*
     |--------------------------------------------------------------------------
@@ -177,6 +177,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /** Custom */
+        Stevenyangecho\UEditor\UEditorServiceProvider::class,
+
     ],
 
     /*
@@ -226,6 +229,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        'UEditor'=>Stevenyangecho\UEditor\UEditorServiceProvider::class,
     ],
 
 ];

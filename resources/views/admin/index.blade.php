@@ -1,88 +1,116 @@
-﻿
-
-@extends('app')
+﻿@extends('admin_app')
 @section('content')
 
-<section class="Hui-article-box">
-	<nav class="breadcrumb"><i class="Hui-iconfont"></i> <a href="/" class="maincolor">首页</a> 
-		<span class="c-999 en">&gt;</span>
-		<span class="c-666">我的桌面</span> 
-		<a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
-	<div class="Hui-article">
-		<article class="cl pd-20">
-			<p class="f-20 text-success">欢迎管理员使用博客后台管理系统
-				<span class="f-14"></span>
-				</p>
-			<p>登录次数：18 </p>
-			<p>上次登录IP：222.35.131.79.1  上次登录时间：2014-6-14 11:19:55</p>
-			<table class="table table-border table-bordered table-bg mt-20">
-				<thead>
-					<tr>
-						<th colspan="2" scope="col">服务器信息</th>
-			</tr>
-		</thead>
-				<tbody>
-					<tr>
-						<th width="30%">服务器计算机名</th>
-						<td><span id="lbServerName">{{ $_SERVER['SERVER_NAME'] }}</span></td>
-			</tr>
-					<tr>
-						<td>服务器IP地址</td>
-						<td>{{ $_SERVER['SERVER_ADDR'] }}</td>
-			</tr>
-					<tr>
-						<td>服务器域名</td>
-						<td>{{ $_SERVER['HTTP_HOST'] }}</td>
-			</tr>
-					<tr>
-						<td>服务器端口 </td>
-						<td>{{ $_SERVER['SERVER_PORT'] }}</td>
-			</tr>
-					<tr>
-						<td>服务器IIS版本 </td>
-						<td>Microsoft-IIS/6.0</td>
-			</tr>
-					<tr>
-						<td>本文件所在文件夹 </td>
-						<td>{{ $_SERVER['DOCUMENT_ROOT'] }}</td>
-			</tr>
-					<tr>
-						<td>服务器操作系统 </td>
-						<td>{{ PHP_OS }}</td>
-			</tr>
-					<tr>
-						<td>系统所在文件夹 </td>
-						<td>$_SERVER['SCRIPT_NAME']</td>
-			</tr>
-					<tr>
-						<td>服务器脚本超时时间 </td>
-						<td>300秒</td>
-			</tr>
-					<tr>
-						<td>服务器的语言种类 </td>
-						<td>Chinese (People's Republic of China)</td>
-			</tr>
-					<tr>
-						<td>服务器当前时间 </td>
-						<td>{{ date('Y-m-d H:i:s') }}</td>
-			</tr>
-					<tr>
-					<tr>
-						<td>当前Session数量 </td>
-						<td>8</td>
-			</tr>
-					<tr>
-						<td>当前SessionID </td>
-						<td>gznhpwmp34004345jz2q3l45</td>
-			</tr>
-					<tr>
-						<td>当前系统用户名 </td>
-						<td>{{ $_SERVER['SERVER_ADMIN'] }}</td>
-			</tr>
-		</tbody>
-	</table>
-</article>
+
+<div class="row">
+	<div class="col-xs-12">
+	<div class="panel panel-default ">
+            <div class="panel-heading white-bg" style="background-color:#fff;">
+				<h3 class="text-center">服务器信息</h3>
+				<div class="row">
+					<div class="col-xs-6">
+						<div class="text-center text-success">
+							上次登录ip地址 : 172.16.1.122
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div class="text-center text-center text-success">
+							上次登录时间 : {{ date('Y-m-d H:i:s') }}
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+
+		<div class="panel-body white-bg">
+			<div class="tab-content as-box ">
+				<div role="tabpanel" class="tab-pane active ">
+					<table class="table table-striped table-hover blog-table" id="data-table">
+						<tbody>
+							<tr>
+								<td width="20%"></td>
+								<th style="width:35%">服务器计算机名</th>
+								<td><span id="lbServerName">{{ $_SERVER['SERVER_NAME'] }}</span></td>
+							</tr>  
+							
+							<tr>
+							<td width="20%"></td>
+								<th>服务器IP地址</th>
+								<td>{{ $_SERVER['SERVER_ADDR'] }}</td>
+							</tr>
+
+							<tr>
+							<td width="20%"></td>
+								<th>服务器域名</th>
+								<td>{{ $_SERVER['HTTP_HOST'] }}</td>
+							</tr>
+
+							<tr>
+							<td width="20%"></td>
+								<th>服务器端口 </th>
+								<td>{{ $_SERVER['SERVER_PORT'] }}</td>
+							</tr>
+
+							<tr>
+							<td width="20%"></td>
+								<th>本文件所在文件夹 </th>
+								<td>{{ $_SERVER['DOCUMENT_ROOT'] }}</td>
+							</tr>
+
+							<tr>
+							<td width="20%"></td>
+								<th>服务器操作系统 </th>
+								<td>{{ PHP_OS }}</td>
+							</tr>
+
+							<tr>
+							<td width="20%"></td>
+								<th>系统所在文件夹 </th>
+								<td>$_SERVER['SCRIPT_NAME']</td>
+							</tr>
+
+							<tr>
+							<td width="20%"></td>
+								<th>服务器脚本超时时间 </th>
+								<td>300秒</td>
+							</tr>
+
+							<tr>
+							<td width="20%"></td>
+								<th>服务器的语言种类 </th>
+								<td>Chinese (People's Republic of China)</td>
+							</tr>
+
+							<tr>
+							<td width="20%"></td>
+								<th>服务器当前时间 </th>
+								<td>{{ date('Y-m-d H:i:s') }}</td>
+							</tr>
+
+							<tr>
+							<td width="20%"></td>
+								<th>当前SessionID </th>
+								<td>{{ session_id() }}</td>
+							</tr>
+							
+							<tr>
+							<td width="20%"></td>
+								<th>当前系统用户名 </th>
+								<td>{{ $_SERVER['SERVER_ADMIN'] }}</td>
+							</tr>
+
+						</tbody>
+						<tfoot>
+							<tr>
+								<td>
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+			<div>
+		</div>
+	</div>
 </div>
-</section>
 
 @stop

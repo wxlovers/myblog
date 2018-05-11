@@ -16,4 +16,11 @@
 // });
 
 Route::get('/', 'Home\IndexController@index');
-Route::get('admin', 'Admin\IndexController@index');
+
+Route::group(['middleware' => ['admin']], function () {
+    Route::resource('article', 'Admin\ArticlesController');
+});
+
+Auth::routes();
+
+Route::get('/blogadmin', 'HomeController@index')->name('home');
